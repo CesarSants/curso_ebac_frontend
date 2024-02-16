@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+form {
+    margin-top: 40px;
+
+}
+
+input, button {
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 60%;
+    height: 50px;
+    align-items: center;
+
+}
+
+#myForm, h1, h2 {
+    margin: 80px;
+    max-width: 1000px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.message {
+    margin: 0px 80px 80px 80px;
+    max-width: 1000px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
