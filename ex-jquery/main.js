@@ -3,18 +3,22 @@ const tarefas = [];
 $(document).ready(function() {
     $("#botao-adicionar").click(function(e) {
         e.preventDefault();
+        let taskInput = $("#tarefa-nova")[0];
         const newTask = $("#tarefa-nova").val();
 
-        if(tarefas.includes(newTask.value)) {
-            alert(`A tarefa: ${newTask.value} ja foi inserida.`);
+        if(tarefas.includes(newTask)) {
+            taskInput.setCustomValidity('Esta tarefa já existe!');
+            taskInput.reportValidity();
         }
 
         else if (newTask == ""){
-            alert('adicione uma tarefa');
+            taskInput.setCustomValidity('Adicione uma tarefa!');
+            taskInput.reportValidity();
         }
 
         else{
             $("#taskList").append("<li>" + newTask + " <button class='delete-task'>Deletar</button></li>");
+            tarefas.push(newTask)
             $("#tarefa-nova").val("");
         }
     });
